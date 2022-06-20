@@ -10,4 +10,14 @@ public class MainMenuController : MonoBehaviour
         Debug.Log("Created By FX Mario Jevta - 149251970101-23");
         SceneManager.LoadScene("Game");
     }
+
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
+    public void Credit()
+    {
+        SceneManager.LoadScene("Credit");
+    }
 }

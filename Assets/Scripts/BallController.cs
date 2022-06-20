@@ -6,6 +6,7 @@ public class BallController : MonoBehaviour
 {
     public Vector2 speed;
     public Vector2 resetPosition;
+    public string name_;
     private Rigidbody2D rig;
 
     // Start is called before the first frame update
@@ -23,5 +24,11 @@ public class BallController : MonoBehaviour
     public void ActivatePUSpeedUp(float magnitude)
     {
         rig.velocity *= magnitude;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log( "collide (name) : " + collision.collider.name );
+        name_ = collision.collider.name;
     }
 }
